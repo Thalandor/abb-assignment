@@ -15,10 +15,10 @@ It is docker so it should work directly, however in case it wouldn't work for an
 - Once it finishes, run 'npm run start'
 
 ## Implementation details and points to improve
-- The most impacting performance issue would be receiving a lot of messages from the websocket, currently every message received is rendered on the client. However, in case the amount on renders would increase for any reason, a debounce(if the requirements allow it) should be needed to avoid overloading the UI. On this particular case, I would separate the logic of receiving the event from the socket and the painting of the part.
+- The most impacting performance issue would be receiving a lot of messages from the websocket, currently every message received is rendered on the client. However, in case the amount on renders would increase for any reason, a debounce(if the requirements allow it) should be needed to avoid overloading the UI. On this particular case, I would separate the logic of receiving the event from the socket and the painting of the part, putting the first on a new component and then using props to pass the data received after debouncing it to the 'painting' component.
 - Code splitting is not used, however, as the number of pages increases, the functionality should be used to help reduce the size of the bundle.
 - As there was no need to share state between different components, a system like redux is not used, it introduces a lot of noise on the code for just a short assignment.
-- This is a development build, this means, no optimizations by webpack were made (docker executes run start instead of a run build).
+- This is a development build, this means, no optimizations by webpack were made (docker executes run start instead of a run build). Also, volumes are there for being able to change the code 'in live'.
 - As there was the possibility to implement the backend, I wanted to try to play a bit with docker and socket.io(first time with both).
 - I could not find a suitable exclamation circle. The one that looks like  the one on the mock is for pro licenses only.
 - The application is quite responsive vertically but not horizontally, it needs improvement on this part. 
