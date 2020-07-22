@@ -1,8 +1,10 @@
 {
-  "name": "abb-assignment",
+  "name": "abb-be-assignment",
   "version": "1.0.0",
   "main": "./src/server.js",
+  "description": "Back end for the assignment",
   "license": "MIT",
+  "private": true,
   "scripts": {
     "start": "node ./src/server.js"
   },

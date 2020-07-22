@@ -1,5 +1,6 @@
 {
   "name": "abb-fe-assignment",
+  "description": "Front end client for the assignment",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
