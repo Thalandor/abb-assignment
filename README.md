@@ -14,6 +14,9 @@ It is docker so it should work directly, however in case it wouldn't work for an
 - Run 'npm install'
 - Once it finishes, run 'npm run start'
 
+When the application is up and running, it should be accessible from 'http://localhost:3000'
+
+
 ## Implementation details and points to improve
 - The most impacting performance issue would be receiving a lot of messages from the websocket, currently every message received is rendered on the client. However, in case the amount on renders would increase for any reason, a debounce(if the requirements allow it) should be needed to avoid overloading the UI. On this particular case, I would separate the logic of receiving the event from the socket and the painting of the part, putting the first on a new component and then using props to pass the data received after debouncing it to the 'painting' component.
 - Code splitting is not used, however, as the number of pages increases, the functionality should be used to help reduce the size of the bundle.
@@ -23,3 +26,4 @@ It is docker so it should work directly, however in case it wouldn't work for an
 - I could not find a suitable exclamation circle. The one that looks like  the one on the mock is for pro licenses only.
 - The application is quite responsive vertically but not horizontally, it needs improvement on this part. 
 - I couldn't figure out a way to set properly a two columns feature on the time I had, probably using media queries or some javascript could make it possible.
+- It took me quite a while to leave the assignment on this state, but at least I enjoyed the assignment!
