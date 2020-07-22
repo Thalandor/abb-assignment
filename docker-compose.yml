@@ -5,6 +5,8 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
+    environment: 
+      REACT_APP_WEBSOCKET_API: localhost:3001
     volumes:
       - /app/node_modules
       - ./frontend:/app
@@ -15,7 +17,7 @@ services:
   websocket:
     build:
       context: ./backend
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile    
     ports:
       - '3001:3001'
     restart: on-failure

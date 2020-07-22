@@ -9,7 +9,6 @@ function App() {
       <main className="main">
         <PartContainer></PartContainer>
       </main>
-      <footer>endlalala</footer>
     </div>
   );
 }
