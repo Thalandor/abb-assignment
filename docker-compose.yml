@@ -1,0 +1,25 @@
+version: '3.3'
+services:
+  webapp:
+    stdin_open: true # Needed, seems a bug with react-scripts 3.4.1 :(
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    volumes:
+      - /app/node_modules
+      - ./frontend:/app
+    ports:
+      - '3000:3000'
+    restart: on-failure
+    container_name: webapp
+  websocket:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - '3001:3001'
+    restart: on-failure
+    container_name: websocket
+    volumes:
+      - /app/node_modules 
+      - ./backend:/app 

@@ -1,0 +1,22 @@
+.container{
+    font-weight: bold;
+    display: flex;
+    .controlContainer{
+        width: 30%;
+    }
+    .devContainer{
+        width: 30%;
+        display: flex;
+        justify-content: center;
+    }
+    .devOutTolContainer{
+        width: 30%;
+        display: flex;
+        justify-content: center;
+    }
+    .iconContainer{
+        width: 10%;
+        display: flex;
+        justify-content: center;
+    }
+}

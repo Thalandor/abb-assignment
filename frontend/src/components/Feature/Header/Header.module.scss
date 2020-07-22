@@ -1,0 +1,30 @@
+@import '../../../styles/variables.scss';
+.container{
+    height: 30px;
+    display: flex;
+    color: white;
+    align-items: center;
+    text-transform: uppercase;
+    .leftIcon{
+        margin-left: 20px;
+    }
+    .title{
+        margin-left: 40px;
+    }
+    .rightIcon{
+        margin-left: auto;
+        margin-right: 20px;
+    }
+}
+
+.red{
+    background-color: $abb-red;
+}
+
+.yellow{
+    background-color: $abb-yellow;
+}
+
+.green{
+    background-color: $abb-green;
+}

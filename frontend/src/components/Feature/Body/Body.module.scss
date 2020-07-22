@@ -1,0 +1,8 @@
+@import '../../../styles/variables.scss';
+.container{
+    background-color: $abb-lightgrey;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-height: 800px;
+}
