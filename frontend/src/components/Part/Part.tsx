@@ -13,7 +13,7 @@ const Part = (props: Props) => {
             <span className={styles.titleContainer}>{props.title}</span>
             <div className={styles.featureContainer}>
                 {props.featureData.map(
-                    data => <Feature color={data.color} data={data.data} name={data.name}></Feature>
+                    (data, index) => <Feature color={data.color} data={data.data} name={data.name} key={index}></Feature>
                 )}
             </div>
         </div>)

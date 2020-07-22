@@ -10,8 +10,8 @@ const Body = (props: Props) => {
     return (
         <div className={styles.container}>
             <BodyHeader></BodyHeader>
-            {props.data.map(data =>
-                <BodyInfo control={data.control} dev={data.dev} devOutTol={data.devOutTol} icon={data.icon}></BodyInfo>
+            {props.data.map((data, index) =>
+                <BodyInfo control={data.control} dev={data.dev} devOutTol={data.devOutTol} icon={data.icon} key={index}></BodyInfo>
             )}
         </div>)
 }
