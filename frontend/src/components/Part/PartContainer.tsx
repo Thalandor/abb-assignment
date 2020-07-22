@@ -15,7 +15,7 @@ const PartContainer = () => {
     }, []);
     return (
         <>
-            {partData ? <Part featureData={partData.featureData} title={partData.title}></Part> : null}
+            {partData ? <Part featureData={partData.featureData} title={partData.title}></Part> : 'Waiting for a new part...'}
         </>
     )
 }
